@@ -92,7 +92,7 @@ The error handling function receives as parameters all the data from the ```draw
 -- draw default tile when getting unknown tile name
 tile_cutter:set_error_handler(
     function (name, x, y, ...)
-        tc:tile_cutter("default_tile", x, y, ...)
+        tile_cutter:draw("default_tile", x, y, ...)
     end
 )
 ```
