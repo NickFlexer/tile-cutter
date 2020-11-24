@@ -1,6 +1,8 @@
 # tile-cutter
 
-A small module for [LÖVE](https://love2d.org/) that makes it easy to draw square tiles
+A small module for [LÖVE](https://love2d.org/) that makes it easy to draw square tiles. Works with tilesets with square tiles without borders between tiles
+
+
 
 ## Simple example
 
