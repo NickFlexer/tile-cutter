@@ -25,7 +25,7 @@ function love.load()
 end
 
 function love.draw()
-    -- now you can draw, scale or rotate tiles
+    -- now you can draw, rotate or scale tiles
     tc:draw("elve", 32, 64)
     tc:draw("elve", 96, 64, 0, 2)
     tc:draw("elve", 64, 64, math.pi / 2, 1, 1, 0, 32)
@@ -34,7 +34,7 @@ end
 
 The result will be something like this:
 
-
+![preview](https://github.com/NickFlexer/tile-cutter/blob/main/preview.jpeg?raw=true)
 
 ## Documentation
 
