@@ -3,8 +3,8 @@
 
 
 function love.conf(t)
-    t.window.title = "conf"
+    t.window.title = "Test"
 
-    t.window.width = 800
-    t.window.height = 600
+    t.window.width = 400
+    t.window.height = 200
 end

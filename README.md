@@ -17,7 +17,7 @@ function love.load()
     tc = TileCutter("fantasy-tileset.png", 32)
     tc:config_tileset(
         {
-            {"elf", 1, 19},
+            {"elve", 1, 19},
             {"dwarf", 2, 19},
             {"barbarian", 3, 19}
         }
@@ -25,11 +25,16 @@ function love.load()
 end
 
 function love.draw()
-    tc:draw("elf", 0, 0)
-    tc:draw("dwarf", 32, 32)
-    tc:draw("barbarian", 64, 64)
+    -- now you can draw, scale or rotate tiles
+    tc:draw("elve", 32, 64)
+    tc:draw("elve", 96, 64, 0, 2)
+    tc:draw("elve", 64, 64, math.pi / 2, 1, 1, 0, 32)
 end
 ```
+
+The result will be something like this:
+
+
 
 ## Documentation
 
@@ -51,7 +56,7 @@ Returns:
 Prepare tiles for drawning
 
 Arguments:
-* ```tileset_data``` ```(table)``` - Table containing containing tables with the name of the tile and its coordinates (X and Y) in the dimensions of a single tile
+* ```tileset_data``` ```(table)``` - Table containing list of tables with the name of the tile and its coordinates (X and Y) in the dimensions of a single tile
 
 ```lua
 tile_cutter:config_tileset({

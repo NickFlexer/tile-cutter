@@ -15,7 +15,7 @@ function love.load()
     tc = TileCutter("fantasy-tileset.png", 32)
     tc:config_tileset(
         {
-            {"elf", 1, 19},
+            {"elve", 1, 19},
             {"dwarf", 2, 19},
             {"barbarian", 3, 19},
             {"rabbit", 2, 21}
@@ -39,12 +39,14 @@ end
 
 function love.draw()
     -- simple drawing of tiles
-    tc:draw("elf", 100, 100)
-    tc:draw("barbarian", 500, 100)
+    tc:draw("elve", 32, 64)
 
-    -- draw tile with extra arguments
-    tc:draw("dwarf", 300, 400, 2, 2, 2)
+    -- scaling
+    tc:draw("elve", 96, 64, 0, 2)
+
+    -- rotation
+    tc:draw("elve", 64, 64, math.pi / 2, 1, 1, 0, 32)
 
     -- unknown tile name
-    tc:draw("Wizard", 600, 300)
+    -- tc:draw("Wizard", 256, 64)
 end
