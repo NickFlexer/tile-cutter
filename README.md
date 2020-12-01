@@ -89,7 +89,7 @@ If TileCutter doesn't know the passed tile name it thrown an exception:
 If you want to change the behavior of the TileCutter when trying to draw a tile with an unknown name, set the new behavior in the ```new_handler``` function
 
 Arguments:
-* ```new_handler``` ```(function)``` - New handler function
+* ```new_handler``` ```(function)``` - New handler function or callable table
 
 The error handling function receives as parameters all the data from the ```draw``` function
 

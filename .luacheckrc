@@ -1,1 +1,1 @@
-std = "max+love"
+std = "max+love+busted"

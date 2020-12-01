@@ -25,14 +25,14 @@ function love.load()
     -- change default behavior of error handler
     -- if we dont know an tile, we draw rabbit tile
     tc:set_error_handler(
-        function (name, x, y, ...)
+        function (_, x, y, ...)
             tc:draw("rabbit", x, y, ...)
         end
     )
 end
 
 
-function love.update(dt)
+function love.update()
 
 end
 
@@ -48,5 +48,5 @@ function love.draw()
     tc:draw("elve", 64, 64, math.pi / 2, 1, 1, 0, 32)
 
     -- unknown tile name
-    -- tc:draw("Wizard", 256, 64)
+    tc:draw("Wizard", 256, 64)
 end
