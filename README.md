@@ -1,8 +1,8 @@
 # tile-cutter
 
+[![Build Status](https://travis-ci.org/NickFlexer/tile-cutter.svg?branch=main)](https://travis-ci.org/NickFlexer/tile-cutter) [![Coverage Status](https://coveralls.io/repos/github/NickFlexer/tile-cutter/badge.svg?branch=main)](https://coveralls.io/github/NickFlexer/tile-cutter?branch=main)
+
 A small module for [LÖVE](https://love2d.org/) that makes it easy to draw square tiles. Works with tilesets with square tiles without borders between tiles
-
-
 
 ## Simple example
 
@@ -102,3 +102,6 @@ tile_cutter:set_error_handler(
 )
 ```
 
+## Testing
+
+Tests defined with ```busted``` test farmework. To run the suite, install busted and simply execute ```busted``` in the tile-cutter directory.
