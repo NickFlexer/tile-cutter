@@ -32,6 +32,19 @@ describe("Tile cutter", function ()
             _G.love.graphics.newImage:revert()
         end)
 
+        it("multuple instance", function ()
+            spy.on(_G.love.graphics, "newImage")
+
+            local tc1 = TileCutter("test1.png", 32)
+            local tc2 = TileCutter("test2.png", 32)
+
+            assert.are_not.equal(tc1, tc2)
+            assert.spy(_G.love.graphics.newImage).was_called_with("test1.png")
+            assert.spy(_G.love.graphics.newImage).was_called_with("test2.png")
+
+            _G.love.graphics.newImage:revert()
+        end)
+
         it("invalid tile size", function ()
             assert.has_error(
                 function () TileCutter("test.png", "32") end, "TileCutter() tile size must be a number value"
